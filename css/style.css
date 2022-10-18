@@ -1,0 +1,327 @@
+/* Start Variables */
+:root {
+    --primary-1: hsl(243, 87%, 12%);
+    --primary-2: hsl(238, 22%, 44%);
+    --accent-1: hsl(224, 93%, 58%);
+    --accent-2: hsl(170, 45%, 43%);
+    --neutral-1: hsl(240, 75%, 98%);
+    --neutral-2: hsl(0, 0%, 75%);
+    --font-raleway: "Raleway", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
+}
+/* End Variables */
+
+/* Start Global Rules */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-open-sans);
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav,
+section,
+footer {
+    padding: 70px 0;
+}
+
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+section .container {
+    display: flex;
+}
+
+section .container .left-sec,
+section .container .right-sec {
+    width: 50%;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* Start Navbar */
+
+a,
+input {
+    transition: 0.2s;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 120px;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .links {
+    width: 300px;
+}
+
+nav .links ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+nav .links ul li a {
+    color: var(--primary-2);
+    font-family: var(--font-raleway);
+    font-weight: 700;
+}
+
+nav .links ul li a:hover {
+    color: var(--primary-1);
+}
+
+/* End Navbar */
+
+/* Start Sections */
+
+.first-section .left-sec h1,
+.second-section .left-sec h1 {
+    color: var(--primary-1);
+    font-family: var(--font-raleway);
+}
+.first-section .left-sec h1,
+.second-section .left-sec h1,
+.third-section .left-sec h1 {
+    font-size: 2.2rem;
+}
+
+.first-section .left-sec > p,
+.second-section .left-sec > p {
+    color: var(--primary-2);
+}
+
+/* End Sections */
+
+/* Start First Section */
+
+.first-section form {
+    display: flex;
+}
+.first-section form input[type="email"] {
+    width: 55%;
+    padding-left: 12px;
+    margin-right: 10px;
+}
+
+.first-section form input[type="submit"] {
+    width: 35%;
+    border: none;
+    background-color: var(--accent-1);
+    color: white;
+    border-radius: 5px;
+    padding: 12px 0;
+    cursor: pointer;
+}
+.first-section form input[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+/* End First Section */
+
+/* Start Second Section */
+.second-section {
+    background-color: var(--neutral-1);
+}
+.second-section .fylo-hover > p {
+    display: inline-block;
+    color: var(--accent-2);
+    border-bottom: 1px solid var(--accent-2);
+    cursor: pointer;
+}
+.second-section .fylo-hover > p:hover + .fylo-box {
+    display: block;
+}
+.second-section .fylo-box {
+    background-color: white;
+    padding: 10px 20px;
+    max-width: 350px;
+    display: none;
+    box-shadow: 0 0 10px 10px #eee;
+    color: var(--primary-1);
+}
+.second-section .fylo-box p {
+    font-size: 0.9rem;
+}
+.second-section .fylo-box .fylo-author {
+    display: flex;
+    align-items: center;
+}
+.second-section .fylo-box .fylo-author img {
+    width: 50px;
+    border-radius: 50%;
+}
+.second-section .fylo-box .fylo-author-name p {
+    margin: 0 0 0 10px;
+}
+.second-section .fylo-box .fylo-author-name p:first-child {
+    font-weight: bold;
+}
+/* End Second Section */
+
+/* Start Third Section */
+.third-section {
+    background-color: var(--primary-2);
+}
+.third-section .left-sec {
+    margin-right: 10%;
+}
+.third-section h1 {
+    margin: 25px 0;
+    color: var(--neutral-1);
+}
+.third-section p {
+    color: var(--neutral-2);
+}
+.third-section form input[type="email"] {
+    width: 100%;
+    padding-left: 12px;
+    margin: 25px 0 10px 0;
+}
+.third-section form input[type="email"],
+.third-section form input[type="submit"] {
+    height: 40px;
+}
+
+.third-section form input[type="submit"] {
+    border: none;
+    background-color: var(--accent-1);
+    color: white;
+    border-radius: 5px;
+    width: 45%;
+    cursor: pointer;
+}
+
+.third-section form input[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+/* End Third Section */
+
+/* Start Footer */
+footer {
+    background-color: var(--primary-1);
+}
+
+footer .grid-footer {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    color: var(--neutral-1);
+}
+footer .grid-footer a {
+    color: var(--neutral-1);
+}
+footer .grid-footer a:hover {
+    color: var(--neutral-2);
+}
+footer .grid-footer div:not(:first-child) {
+    margin-top: 16px;
+}
+footer .grid-footer .col-2 a,
+footer .grid-footer .col-3 a {
+    display: block;
+    padding-bottom: 10px;
+}
+footer .grid-footer .col-4 a {
+    padding: 0 5px;
+}
+footer .grid-footer .col-1 img {
+    margin-right: 5px;
+}
+
+/* End Footer */
+
+@media (max-width: 500px) {
+    nav .logo img {
+        width: 100px;
+    }
+    nav .links {
+        width: 230px;
+    }
+    section .container {
+        flex-direction: column-reverse;
+    }
+    section .container .left-sec,
+    section .container .right-sec {
+        width: 100%;
+    }
+
+    form input {
+        width: 100%;
+    }
+
+    .first-section,
+    .second-section h1,
+    .second-section .fylo-hover > p {
+        text-align: center;
+    }
+    .first-section .left-sec > h1,
+    .second-section .left-sec > h1 {
+        font-size: 1.6rem;
+    }
+
+    .third-section .container {
+        flex-direction: column;
+    }
+    .first-section form {
+        flex-direction: column;
+    }
+    .first-section form input[type="email"],
+    .first-section form input[type="submit"],
+    .third-section form input[type="email"],
+    .third-section form input[type="submit"] {
+        width: 100%;
+        height: 50px;
+    }
+    .first-section form input[type="email"] {
+        margin: 0 0 10px 0;
+    }
+    .third-section form input[type="email"] {
+        margin-top: initial;
+    }
+    footer .grid-footer {
+        display: block;
+    }
+}
